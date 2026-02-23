@@ -1,0 +1,220 @@
+
+/* admin/assets/css/admin-style.css */
+
+/* Admin paneli genel ayarlar ve ana sitenin stillerini ezme */
+body {
+    background-color: var(--light-bg-color);
+}
+
+.admin-container {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+body.dark-theme .admin-container {
+    background-color: var(--dark-bg-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.message-status {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Hata mesajları için */
+.message-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Form grupları */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+body.dark-theme .form-group label {
+    color: var(--light-text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: calc(100% - 22px); /* Padding dahil */
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+body.dark-theme .form-group input[type="text"],
+body.dark-theme .form-group input[type="email"],
+body.dark-theme .form-group input[type="password"],
+body.dark-theme .form-group input[type="number"],
+body.dark-theme .form-group textarea,
+body.dark-theme .form-group select {
+    background-color: #444444;
+    border-color: #666666;
+    color: var(--light-text-color);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Tablolar */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body.dark-theme .data-table {
+    background-color: var(--dark-bg-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+body.dark-theme .data-table th,
+body.dark-theme .data-table td {
+    border-color: #444444;
+    color: var(--light-text-color);
+}
+
+.data-table th {
+    background-color: var(--light-bg-color);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+body.dark-theme .data-table th {
+    background-color: #333333;
+    color: var(--accent-color);
+}
+
+.data-table tr:nth-child(even) {
+    background-color: var(--light-bg-color);
+}
+
+body.dark-theme .data-table tr:nth-child(even) {
+    background-color: #333333;
+}
+
+.data-table tr:hover {
+    background-color: #e9e9e9;
+}
+
+body.dark-theme .data-table tr:hover {
+    background-color: #444444;
+}
+
+.action-buttons a.btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+.btn-info:hover {
+    background-color: #138496;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: var(--text-color);
+}
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Responsive admin paneli sidebar */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .admin-main-content {
+        margin-left: 0;
+    }
+    .admin-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .admin-sidebar ul li a {
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 20px;
+    }
+    .admin-container {
+        padding: 15px;
+    }
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .admin-header .logout-btn {
+        margin-top: 10px;
+    }
+}

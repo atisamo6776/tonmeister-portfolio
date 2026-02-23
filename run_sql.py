@@ -1,11 +1,15 @@
 
 import mysql.connector
+import os
+
+# Veritabanı kimlik bilgilerini ortam değişkenlerinden almaya çalışın.
+# Veya manuel olarak doldurun. Bu dosya, hassas veriler içermemeli ve genellikle bir kerelik kullanılır.
 
 db_config = {
-    'host': '92.249.63.61',
-    'database': 'kesictrs_test',
-    'user': 'kesictrs_admin',
-    'password': 'Atik3777??'
+    'host': os.getenv('DB_HOST') or '92.249.63.61',
+    'database': os.getenv('DB_NAME') or 'kesictrs_test',
+    'user': os.getenv('DB_USER') or 'kesictrs_admin',
+    'password': os.getenv('DB_PASSWORD') or 'Atik3777??'
 }
 
 def execute_sql_file(filepath):
@@ -18,7 +22,6 @@ def execute_sql_file(filepath):
             with open(filepath, 'r') as f:
                 sql_file_content = f.read()
             
-            # SQL komutlarını noktalı virgüle göre ayırın
             sql_commands = [cmd.strip() for cmd in sql_file_content.split(';') if cmd.strip()]
             
             for command in sql_commands:
