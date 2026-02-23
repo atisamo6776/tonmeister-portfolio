@@ -1,0 +1,29 @@
+
+# Git Ignore for Tonmeister Portfolio Project
+
+# PHP specific
+/vendor/
+
+# Python (virtual environment)
+/venv/
+
+# Node.js
+/node_modules/
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+thumbs.db
+
+# Log files
+*.log
+
+# Database backup files
+*.sql.bak
+
+# Sensitive files (if any were to exist locally)
+.env
