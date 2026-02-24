@@ -6,10 +6,10 @@ import os
 # Veya manuel olarak doldurun. Bu dosya, hassas veriler içermemeli ve genellikle bir kerelik kullanılır.
 
 db_config = {
-    'host': os.getenv('DB_HOST') or '92.249.63.61',
-    'database': os.getenv('DB_NAME') or 'kesictrs_test',
-    'user': os.getenv('DB_USER') or 'kesictrs_admin',
-    'password': os.getenv('DB_PASSWORD') or 'Atik3777??'
+    'host': os.getenv('DB_HOST') or 'localhost',
+    'database': os.getenv('DB_NAME') or 'your_database',
+    'user': os.getenv('DB_USER') or 'your_user',
+    'password': os.getenv('DB_PASSWORD') or 'your_password'
 }
 
 def execute_sql_file(filepath):
@@ -44,4 +44,4 @@ def execute_sql_file(filepath):
             print("Veritabanı bağlantısı kapatıldı.")
 
 # SQL dosyasını çalıştır
-execute_sql_file('tonmeister-portfolio/database.sql')
+execute_sql_file('database.sql')

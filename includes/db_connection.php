@@ -5,10 +5,10 @@
 // Güvenlik nedeniyle bu bilgileri doğrudan Git deposunda tutmaktan kaçının.
 // CPanel ortamında genellikle manuel olarak doldurmanız veya public_html dışında bir dosyada tutmanız gerekir.
 
-$host = getenv('DB_HOST') ?: '92.249.63.61'; // Varsayılan olarak direkt IP, CPanel'de düzenlenmeli
-$database = getenv('DB_NAME') ?: 'kesictrs_test'; // CPanel'de düzenlenmeli
-$user = getenv('DB_USER') ?: 'kesictrs_admin'; // CPanel'de düzenlenmeli
-$password = getenv('DB_PASSWORD') ?: 'Atik3777??'; // CPanel'de düzenlenmeli
+$host = getenv('DB_HOST') ?: 'localhost';
+$database = getenv('DB_NAME') ?: 'your_database';
+$user = getenv('DB_USER') ?: 'your_user';
+$password = getenv('DB_PASSWORD') ?: 'your_password';
 
 // Eğer CPanel'de ortam değişkenleri ayarlanamıyorsa, aşağıdaki satırları kullanın
 // ve bu dosyayı public_html dışındaki bir dizine taşıyarak include edin.

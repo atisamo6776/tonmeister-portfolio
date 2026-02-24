@@ -178,7 +178,7 @@
 
     <!-- WhatsApp Sabit İletişim Barı -->
     <div class="whatsapp-fixed-bar">
-        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">
+        <a href="https://wa.me/905000000000" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın
         </a>
     </div>
